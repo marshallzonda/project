@@ -1,23 +1,21 @@
 "use strict";
 
-// const category = 'toys';
+const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?','');
 
-// console.log(`https://someurl.com/${category}/5`);
+const personalMovieDB = {
+    count:numberOfFilms,
+    movies:{},
+    actors:{},
+    genres:[],
+    private:false
+};
 
-// const user = "Ivan";
+let lastFilmYouSee = prompt('Один из последнийх просмотренных фильмов?', '');
+let filmRating = prompt('На сколько оцените его ?', '');
+let lastFilmYouSeeAgain = prompt('Еще один из последнийх просмотренных фильмов?', '');
+let filmRatingAgain = prompt('На сколько оцените его ?', '');
 
-// alert(`Hello ${user}`);
+personalMovieDB.movies[lastFilmYouSee] = filmRating;
 
-// let incr = 10,
-//     decr = 10;
-
-// ++incr;
-// --decr;
-
-
-
-// console.log(2*4 === 8);
-const isChecked = true,
-    isClose = false;
-
-    console.log(isChecked || !isClose);
+personalMovieDB.movies[lastFilmYouSeeAgain] = filmRatingAgain;
+console.log(personalMovieDB);
